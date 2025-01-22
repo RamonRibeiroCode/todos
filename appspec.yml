@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ramon/nodejs-aws-codedeploy-pipeline
+    destination: /home/ramon/dev/todo
 hooks:
   # ApplicationStop:
   # DownloadBundle:
