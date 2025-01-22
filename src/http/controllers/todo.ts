@@ -33,7 +33,7 @@ export async function list(request: FastifyRequest, reply: FastifyReply) {
     const listUseCase = new ListUseCase(todoRepository)
     const todos = await listUseCase.execute()
 
-    return reply.status(200).send({ todos })
+    return reply.status(200).send({ todos, version: '0.0.1' })
   } catch (error) {
     console.log(error)
     return reply.status(500).send()
