@@ -1,0 +1,18 @@
+version: 0.0
+os: linux
+
+files:
+  - source: /
+    destination: /
+hooks:
+  BeforeInstall:
+    - location: scripts/install_dependencies
+      timeout: 20000
+      runas: root
+    - location: scripts/build_project
+      timeout: 20000
+      runas: root
+  ApplicationStart:
+    - location: scripts/start_server
+      timeout: 2000
+      runas: ubuntu
