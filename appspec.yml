@@ -1,18 +1,22 @@
 version: 0.0
 os: linux
-
 files:
   - source: /
-    destination: /
+    destination: /home/ramon/nodejs-aws-codedeploy-pipeline
 hooks:
-  BeforeInstall:
-    - location: scripts/install_dependencies
-      timeout: 20000
-      runas: root
-    - location: scripts/build_project
-      timeout: 20000
+  # ApplicationStop:
+  # DownloadBundle:
+  #  BeforeInstall:
+  #    - location: scripts/before_install.sh
+  #      timeout: 300
+  #      runas: root
+  # Install:
+  AfterInstall:
+    - location: scripts/after_install.sh
+      timeout: 300
       runas: root
   ApplicationStart:
-    - location: scripts/start_server
-      timeout: 2000
-      runas: ubuntu
+    - location: scripts/application_start.sh
+      timeout: 300
+      runas: root
+# ValidateService:
