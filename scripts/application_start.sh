@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo 'run application_start.sh: ' >> /home/ramon/dev/todo/deploy.log
+echo 'run application_start.sh: ' >> /home/ramon/todos/deploy.log
 
-echo 'yarn start' >> /home/ramon/dev/todo/deploy.log
-yarn start >> /home/ramon/dev/todo/deploy.log
+echo 'yarn start' >> /home/ramon/todos/deploy.log
+yarn start >> /home/ramon/todos/deploy.log
