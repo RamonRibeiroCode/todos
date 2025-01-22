@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ramon/dev/todo
+    destination: /home/ramon/todos
 hooks:
   # ApplicationStop:
   # DownloadBundle:
