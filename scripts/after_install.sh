@@ -1,5 +1,5 @@
 #!/bin/bash
 
-echo 'yarn install' >> /home/ramon/todos/deploy.log 
-yarn install >> /home/ramon/todos/deploy.log
+echo 'yarn install && yarn build' >> /home/ramon/todos/deploy.log 
+yarn install && yarn build >> /home/ramon/todos/deploy.log
 
